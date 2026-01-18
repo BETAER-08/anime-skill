@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERV MAGI SYSTEM v9.0 (Validation Upgrade)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+    <header>
+        <div class="brand">
+            <svg width="30" height="30" viewBox="0 0 100 100">
+                <path d="M50 0 L100 25 L100 75 L50 100 L0 75 L0 25 Z" fill="none" stroke="#ff9900"
+                      stroke-width="5" />
+                <text x="50" y="65" font-size="40" text-anchor="middle" fill="#ff9900"
+                      font-family="monospace">N</text>
+            </svg>
+            MAGI SYSTEM
+        </div>
+        <div class="badges">
+            <span class="badge">CODE: 666</span>
+            <span class="badge red">PRIORITY: AAA</span>
+            <span class="badge">GEMINI-OS</span>
+        </div>
+    </header>
+
+    <div class="magi-grid">
+        <div class="card" id="card-melchior">
+            <h2>MELCHIOR-1</h2>
+            <div class="role">SCIENTIST (SCIENCE)</div>
+            <div class="status blinking">STANDBY</div>
+            <div class="reason-box">Waiting for input...</div>
+        </div>
+
+        <div class="card" id="card-balthasar">
+            <h2>BALTHASAR-2</h2>
+            <div class="role">MOTHER (POLITICS)</div>
+            <div class="status blinking">STANDBY</div>
+            <div class="reason-box">Waiting for input...</div>
+        </div>
+
+        <div class="card" id="card-casper">
+            <h2>CASPER-3</h2>
+            <div class="role">WOMAN (PERSONAL)</div>
+            <div class="status blinking">STANDBY</div>
+            <div class="reason-box">Waiting for input...</div>
+        </div>
+    </div>
+
+    <div class="result-panel" id="final-result-box">
+        <div id="final-result">AWAITING PROPOSAL...</div>
+        <button class="report-btn" id="report-btn" onclick="generateReport()">✨ GENERATE OFFICIAL REPORT</button>
+    </div>
+
+    <div class="control-panel">
+        <input type="password" id="api-key" placeholder="GOOGLE GEMINI API KEY (Required for AI features)">
+        <input type="text" id="user-input" placeholder="ENTER PROPOSAL (ex: Should I deploy Unit-01?)">
+        <button onclick="executeMagi()">EXECUTE</button>
+    </div>
+
+    <div class="self-destruct" onclick="triggerSelfDestruct()">⚠ SD</div>
+</div>
+
+<div class="modal-overlay" id="report-modal">
+    <div class="modal">
+        <h2>TACTICAL OPERATION REPORT</h2>
+        <pre id="report-content"
+             style="white-space: pre-wrap; font-family: 'Share Tech Mono';">Generating report via Gemini...</pre>
+        <button class="modal-close" onclick="closeReport()">CLOSE</button>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+
+</html>
